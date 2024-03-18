@@ -2,7 +2,7 @@ import nltk
 import pandas as pd
 import yaml
 
-from third_party.nltk_book import chunker
+from third_party.nltk_book import chunkers
 
 
 def get_data_config(config_path: str = 'data_config.yaml') -> dict[str, str]:
@@ -11,11 +11,11 @@ def get_data_config(config_path: str = 'data_config.yaml') -> dict[str, str]:
     return data_config
 
 
-def get_feature_generator(feature_generator: str = chunker.DEFAULT_FEATURE_GENERATOR) -> chunker.FeatureGenerator:
-    feature_generators: dict[str, chunker.FeatureGenerator] = {
-        chunker.DEFAULT_FEATURE_GENERATOR: chunker.npchunk_features_bigram_pos,
-        'chunk_features_unigram_word': chunker.npchunk_features_unigram_word,
-        'chunk_features_unigram_pos': chunker.npchunk_features_unigram_pos,
+def get_feature_generator(feature_generator: str = chunkers.DEFAULT_FEATURE_GENERATOR) -> chunkers.FeatureGenerator:
+    feature_generators: dict[str, chunkers.FeatureGenerator] = {
+        chunkers.DEFAULT_FEATURE_GENERATOR: chunkers.npchunk_features_bigram_pos,
+        'chunk_features_unigram_word': chunkers.npchunk_features_unigram_word,
+        'chunk_features_unigram_pos': chunkers.npchunk_features_unigram_pos,
     }
     if feature_generator not in feature_generators:
         raise ValueError('Invalid feature generator')
@@ -53,3 +53,15 @@ def get_synonym_maps(synonyms_df: pd.DataFrame, clean_up_terms: bool = True) -> 
     }
 
 
+def clean_up_text(text: str) -> str:
+    return text.lower()
+
+
+def tokenize_text(text: str) -> list[str]:
+    return nltk.word_tokenize(text)
+
+
+def prerpocess_text(text: str) -> list[str]:
+    cleaned_text = clean_up_text(text)
+    tokens = tokenize_text(cleaned_text)
+    return tokens
