@@ -24,3 +24,10 @@ Run the notebook `process_synonyms.ipynb`.
 
 ## 3. Train and evaluate non-LLM drug recognizer
 Run the notebook `extract_entities_nltk.ipynb`
+
+
+# Third Party code
+
+The `third_party` package contains code from other sources. More specifically:
+ * `third_party/nltk_book` contains modified snippets from the [NLTK Book](https://www.nltk.org/book/). Its licence [permits use of code examples without permission](https://www.nltk.org/book/ch00.html#using-code-examples).
+ * 
