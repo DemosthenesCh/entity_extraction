@@ -3,3 +3,5 @@ raw_synonyms_file_name: data/synonyms.csv
 processed_synonyms_file_name: data/synonyms.parquet
 summaries_file_name: data/brief_summaries.parquet
 extraction_nltk_file_name: data/extraction_nltk_results.parquet
+ground_truth_raw_file_name: data/ground_truth_raw.json
+ground_truth_cleaned_file_name: data/ground_truth_cleaned.json

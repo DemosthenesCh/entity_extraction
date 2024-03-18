@@ -22,7 +22,12 @@ This will store a csv file with synonyms and parquet file with the summaries und
 ## 2. Process the synonyms
 Run the notebook `process_synonyms.ipynb`.
 
-## 3. Train and evaluate non-LLM drug recognizer
+## 3. Get and process the ground truth data 
+Run the notebook `prepare_ground_truth.ipynb`
+
+The ground truth defined in this notebook was created manually. It contains terms that are copied verbatim from the shordDescription field. It contains duplicates.
+
+## 4. Train and evaluate non-LLM drug recognizer
 Run the notebook `extract_entities_nltk.ipynb`
 
 
