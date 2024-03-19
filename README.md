@@ -36,3 +36,8 @@ Run the notebook `extract_entities_nltk.ipynb`
 The `third_party` package contains code from other sources. More specifically:
  * `third_party/nltk_book` contains modified snippets from the [NLTK Book](https://www.nltk.org/book/). Its licence [permits use of code examples without permission](https://www.nltk.org/book/ch00.html#using-code-examples).
  * 
+
+
+
+# Getting an API key
+https://ai.google.dev/tutorials/setup

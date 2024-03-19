@@ -1,0 +1,13 @@
+psycopg2-binary
+SQLAlchemy
+pandas
+jupyterlab
+ydata-profiling
+ipywidgets
+pyarrow
+ratelimiter
+nltk
+svgling
+langchain
+langchain-google-genai
+faiss-gpu
